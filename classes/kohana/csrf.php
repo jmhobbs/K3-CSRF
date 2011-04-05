@@ -18,7 +18,7 @@
 
 		public static function check ( $values, $name = 'default', $purge = true ) {
 			$token = self::get( $name );
-			if( $purge ) { self::clear( $name );
+			if( $purge ) { self::clear( $name ); }
 			return ( isset( $values['kohana-csrf-' . $name ] ) and $values['kohana-csrf-' . $name] === $token );
 		}
 
